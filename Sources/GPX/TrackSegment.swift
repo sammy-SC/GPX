@@ -5,13 +5,12 @@ public struct TrackSegment: GPXNode {
     public init() { }
     
     func generateNode() -> String {
-        let innerNodes = points.reduce("") { result, point in
-            return result + point.generateNode()
-        }
-
+        let innerNodes = points
+            .map { $0.generateNode().indent() }
+            .joined(separator: String.newLine)
         return """
         <trkseg>
-            \(innerNodes)
+        \(innerNodes)
         </trkseg>
         """
     }
