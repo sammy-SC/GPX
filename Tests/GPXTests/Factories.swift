@@ -3,7 +3,7 @@ import GPX
 extension TrackSegment {
     static func make() -> TrackSegment {
         var node = TrackSegment()
-        node.points.append(TrackedPoint(location: Location(latitude: 10, longitude: 10)))
+        node.points.append(TrackedPoint(location: Location(latitude: 10, longitude: 20)))
         return node
     }
 }

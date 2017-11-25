@@ -10,7 +10,7 @@ public struct TrackedPoint: GPXNode {
     }
 
     func generateNode() -> String {
-        var result = "<trkpt lat=\"\(location.latitude)\" lon=\"\(location.latitude)\">"
+        var result = "<trkpt lat=\"\(location.latitude)\" lon=\"\(location.longitude)\">"
 
         if let elevation = elevation {
             let elevationNode = "<ele>\(elevation)</ele>"
