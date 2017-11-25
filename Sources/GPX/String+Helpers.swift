@@ -10,7 +10,7 @@ extension String {
         return String.indentation + self
     }
 
-    func indexAllLines() -> String {
+    func indentedAllLines() -> String {
         return lines
             .map { $0.indented() }
             .joined(separator: String.newLine)

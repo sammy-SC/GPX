@@ -8,7 +8,7 @@ public struct TrackSegment: GPXNode {
         let innerNodes = points
             .map { $0.generateNode() }
             .joined(separator: String.newLine)
-            .indexAllLines()
+            .indentedAllLines()
         return """
         <trkseg>
         \(innerNodes)
