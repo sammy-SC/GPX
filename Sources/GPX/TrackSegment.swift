@@ -6,8 +6,9 @@ public struct TrackSegment: GPXNode {
     
     func generateNode() -> String {
         let innerNodes = points
-            .map { $0.generateNode().indent() }
+            .map { $0.generateNode() }
             .joined(separator: String.newLine)
+            .indexAllLines()
         return """
         <trkseg>
         \(innerNodes)

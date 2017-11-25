@@ -19,7 +19,8 @@ final class TrackTests: XCTestCase {
             <name>Test name</name>
             <desc>Test description</desc>
             <trkseg>
-                <trkpt lat="10.0" lon="10.0"></trkpt>
+                <trkpt lat="10.0" lon="10.0">
+                </trkpt>
             </trkseg>
         </trk>
         """
@@ -35,7 +36,8 @@ final class TrackTests: XCTestCase {
         <trk>
             <name>Test name</name>
             <trkseg>
-                <trkpt lat="10.0" lon="10.0"></trkpt>
+                <trkpt lat="10.0" lon="10.0">
+                </trkpt>
             </trkseg>
         </trk>
         """
@@ -49,7 +51,8 @@ final class TrackTests: XCTestCase {
         let expectedResult = """
         <trk>
             <trkseg>
-                <trkpt lat="10.0" lon="10.0"></trkpt>
+                <trkpt lat="10.0" lon="10.0">
+                </trkpt>
             </trkseg>
         </trk>
         """
