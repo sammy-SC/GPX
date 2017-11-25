@@ -22,7 +22,20 @@ final class TrackedPointTests: XCTestCase {
         XCTAssertEqual(node.generateNode(), expectedResult)
     }
 
+    func testGenerateNodeWithTime() {
+        var node = TrackedPoint(location: Location(latitude: 10, longitude: 10))
+        node.time = Date(timeIntervalSince1970: 1255804646)
+        let expectedResult = """
+        <trkpt lat="10.0" lon="10.0">
+            <time>2009-10-17T18:37:26Z</time>
+        </trkpt>
+        """
+        XCTAssertEqual(node.generateNode(), expectedResult)
+    }
+
     static var allTests = [
         ("testGenerateNode", testGenerateNode),
+        ("testGenerateNodeWithElevation", testGenerateNodeWithElevation),
+        ("testGenerateNodeWithTime", testGenerateNodeWithTime)
         ]
 }
