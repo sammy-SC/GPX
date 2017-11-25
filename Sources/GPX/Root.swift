@@ -18,7 +18,7 @@ public struct Root: GPXNode {
         let tracks = self.tracks
             .map { $0.generateNode() }
             .joined(separator: String.newLine)
-            .lines.map { $0.indent() }
+            .lines.map { $0.indented() }
             .joined(separator: String.newLine)
 
         result += tracks

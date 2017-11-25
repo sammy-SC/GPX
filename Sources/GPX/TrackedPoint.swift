@@ -12,7 +12,7 @@ public struct TrackedPoint: GPXNode {
         if let elevation = elevation {
             let elevationNode = "<ele>\(elevation)</ele>"
             result += String.newLine
-            result += elevationNode.indent()
+            result += elevationNode.indented()
         }
 
         result += String.newLine

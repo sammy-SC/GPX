@@ -44,7 +44,7 @@ public struct Track: GPXNode {
     private func generateTrackSegments() -> String {
         return segments.reduce("") { result, segment in
             let node = segment.generateNode()
-            let reduced = node.lines.map { $0.indent() }.joined(separator: String.newLine)
+            let reduced = node.lines.map { $0.indented() }.joined(separator: String.newLine)
             return result + reduced
         }
     }

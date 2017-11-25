@@ -6,13 +6,13 @@ extension String {
     static let newLine = String(Character.newLine)
     static let indentation = "    "
 
-    func indent() -> String {
+    func indented() -> String {
         return String.indentation + self
     }
 
     func indexAllLines() -> String {
         return lines
-            .map { $0.indent() }
+            .map { $0.indented() }
             .joined(separator: String.newLine)
     }
     
