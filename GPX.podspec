@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "GPX"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.source       = { :git => "https://github.com/sammy-SC/GPX.git", :tag => "#{s.version}" }
   s.summary      = "Small library for generating GPX files."
   s.description  = "Cryptography functions and helpers for Swift implemented in Swift. SHA-1, SHA-2, SHA-3, MD5, PBKDF1, PBKDF2, CRC, Poly1305, HMAC, ChaCha20, Rabbit, Blowfish, AES"
